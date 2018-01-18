@@ -3,36 +3,61 @@
   "version": "1.0.0",
   "description": "401 JS --  Lab 32 Budget Tracker ===",
   "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "webpack-dev-server --inline --hot",
+    "build": "webpack"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/src/test/shim.js",
+      "<rootDir>/src/test/setup.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(scss)$": "<rootDir>/node_modules/jest-css-modules"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pmookerjee/lab-32-combining-reducers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pmookerjee/lab-32-combining-reducers/issues"
+  },
+  "homepage": "https://github.com/Pmookerjee/lab-32-combining-reducers#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.9",
+    "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-form": "^7.2.0",
     "resolve-url-loader": "^2.2.1",
     "sass-loader": "^6.0.6",
+    "uuid": "^3.1.0",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.0",
-    "yarn-lockfile": "^1.1.1"
+    "webpack-dev-server": "^2.9.7"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/namgungssi/lab-32-combining-reducers.git"
-  },
-  "author": "brian namgung",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/namgungssi/lab-32-combining-reducers/issues"
-  },
-  "homepage": "https://github.com/namgungssi/lab-32-combining-reducers#readme"
+  "devDependencies": {
+    "babel-jest": "^21.2.0",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "enzyme-to-json": "^3.3.0",
+    "jest": "^21.2.1",
+    "jest-css-modules": "^1.1.0",
+    "react-test-renderer": "^16.2.0",
+    "sinon": "^4.1.3"
+  }
 }
