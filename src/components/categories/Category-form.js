@@ -42,34 +42,34 @@ class CategoryForm extends React.Component {
 
       <input
       className={this.formState}
-      id="categoryName"
-      type="text"
-      name="name"
-      value={this.state.name}
-      required
-      placeholder="category"
-      onChange={this.handleChange}
+        id="categoryName"
+        type="text"
+        name="name"
+        value={this.state.name}
+        required
+        placeholder="category"
+        onChange={this.handleChange}
       />
 
       <input
       className={this.formState}
-      id="budgetAmt"
-      type="number"
-      name="budget"
-      value={this.state.budget}
-      required
-      placeholder="$"
-      onChange={this.handleChange}
+        id="budgetAmt"
+        type="number"
+        name="budget"
+        value={this.state.budget}
+        required
+        placeholder="$"
+        onChange={this.handleChange}
       />
 
       <a id='deleteButton' className={this.deleteButton} href="#" onClick={()=>this.props.handleDelete(this.props.category.id)}>X</a>
       </div>
 
       <input
-      id='categorySubmitButton'
-      className={this.submitState}
-      type='submit'
-      value={this.props.submitText}/>
+        id='categorySubmitButton'
+        className={this.submitState}
+        type='submit'
+        value={this.props.submitText}/>
       </form>
     )
   }

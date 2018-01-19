@@ -29,10 +29,10 @@ class Categories extends React.Component {
       <div id="categoryWrapper">
       <CategoryForm submitText={this.state.submitText} handler={this.props.handleAddCategory} />
       <CategoryList
-      categories={this.props.categories}
-      handleDelete={this.props.handleDeleteCategory}
-      handleUpdate={this.props.handleUpdateCategory}
-      handleCategories={this.props.categories} />
+        categories={this.props.categories}
+        handleDelete={this.props.handleDeleteCategory}
+        handleUpdate={this.props.handleUpdateCategory}
+        handleCategories={this.props.categories} />
       </div>
     )
   }

@@ -1,4 +1,4 @@
-import { log } from "util";
+import {log} from "util";
 
 
 
@@ -32,6 +32,6 @@ export default (state=initialState, action) => {
     return {...state, [categoryId]: updateExpenseList};
 
     default:
-    return state;    
+    return state;
   };
 };

@@ -15,13 +15,13 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <Header appTitle="Budget Tracker" />
-      <main>
-      <Route exact path='/' component={Categories} />
-      </main>
-      <Footer>
-      <p>Mookerjee Productions 2007</p>
-      </Footer>
+        <Header appTitle="Budget Tracker" />
+          <main>
+            <Route exact path='/' component={Categories} />
+          </main>
+          <Footer>
+            <p>Code Fellows 2018</p>
+        </Footer>
       </div>
     )
   }
