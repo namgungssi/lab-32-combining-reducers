@@ -16,7 +16,7 @@
 
 
 @mixin box-basic {
-  box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
+  box-shadow: 0 0 2px rgba(15, 40, 40, 0.5);
 }
 
 
@@ -26,17 +26,17 @@
 
 
 @mixin box-raised {
-  box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 5px -5px #777;
 }
 
 
 @mixin box-raised-medium {
-  box-shadow: 0 3px 2px #777;
+  box-shadow: 0 3px 3px #777;
 }
 
 
 @mixin box-raised-high {
-  box-shadow: 0 7px 4px #777;
+  box-shadow: 0 8px 4px #777;
 }
 
 
@@ -46,34 +46,34 @@
 
 
 @mixin box-lift {
-  box-shadow: 0 2px 1px #777;
+  box-shadow: 0 2px 2px #777;
 }
 
 
 @mixin box-pushed-in {
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 
 @mixin box-halo-basic {
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
 }
 
 
 @mixin box-halo-loose {
-  box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+  box-shadow: 0 2px #FFFFFF inset, 0 2px 3px rgba(40, 29, 20, 0.5);
 }
 
 
 @mixin box-halo-light {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 
 @mixin box-halo-tight {
   border-bottom: 0 none;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.46);
 }
 
 
@@ -88,10 +88,10 @@
 
 
 @mixin box-button-raised {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12) inset;
   border-color: -moz-use-text-color #FFFFFF #FFFFFF -moz-use-text-color;
   border-style: none solid solid none;
-  border-width: medium 1px 1px medium;
+  border-width: medium 2px 2px medium;
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
 }
 
