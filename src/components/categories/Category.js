@@ -10,12 +10,10 @@ import {createCategory, updateCategory, deleteCategory} from './categoryState/ca
 class Categories extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       submitText: 'Add Category'
     }
   }
-
 
   componentWillReceiveProps(nextProps){
     if(nextProps.category){
@@ -23,16 +21,15 @@ class Categories extends React.Component {
     }
   }
 
-
   render() {
     return (
       <div id="categoryWrapper">
-      <CategoryForm submitText={this.state.submitText} handler={this.props.handleAddCategory} />
+      <CategoryForm submitText={this.state.submitText} handler={this.props.handleAddCategory}/>
       <CategoryList
-        categories={this.props.categories}
-        handleDelete={this.props.handleDeleteCategory}
-        handleUpdate={this.props.handleUpdateCategory}
-        handleCategories={this.props.categories} />
+      categories={this.props.categories}
+      handleDelete={this.props.handleDeleteCategory}
+      handleUpdate={this.props.handleUpdateCategory}
+      handleCategories={this.props.categories}/>
       </div>
     )
   }
@@ -52,4 +49,4 @@ const mapDispatchToProps = (dispatch, getState) => ({
 
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(Categories);
+export default connect(mapStateToProps, mapDispatchToProps)(Categories);
