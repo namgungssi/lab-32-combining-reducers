@@ -9,7 +9,7 @@ import expenseReducer from '../components/expenses/expenseState/expense-reducer'
 describe('Reducer tests', () => {
 
   describe('Category Reducer tests', () => {
-    let category = {name: 'Fabulous', createDate: new Date(), id: uuid()};
+    let category = {name: 'Pebbles', createDate: new Date(), id: uuid()};
     let state =[];
 
 
@@ -19,12 +19,12 @@ describe('Reducer tests', () => {
 
 
       expect(state.length).toEqual(1);
-      expect(state[0].name).toEqual('Fabulous');
+      expect(state[0].name).toEqual('Pebbles');
     });
 
 
     test('update a category', () => {
-      let newCategory = {name: 'New and improved!'};
+      let newCategory = {name: 'Updated'};
 
       state = categoryReducer(state, {
         type: 'CATEGORY_UPDATE',
@@ -36,25 +36,25 @@ describe('Reducer tests', () => {
       });
 
 
-      expect(state[0].name).toEqual('New and improved!');
+      expect(state[0].name).toEqual('Updated');
       expect(state.length).toEqual(1);
     });
 
 
     test('delete a category', () => {
-      let cat1 = {name: 'Cat1', budget: '50', expenses: {}, id: uuid()};
-      let cat2 = {name: 'Cat2', budget: '100', expenses: {}, id: uuid()};
+      let dog1 = {name: 'Dog1', budget: '50', expenses: {}, id: uuid()};
+      let dog2 = {name: 'Dog2', budget: '100', expenses: {}, id: uuid()};
 
-      state = [{...cat1}, {...cat2}];
+      state = [{...dog1}, {...dog2}];
 
       state = categoryReducer(state, {
         type: 'CATEGORY_DESTROY',
-        payload: cat1.id
+        payload: dog1.id
       });
 
 
       expect(state.length).toEqual(1);
-      expect(state[0].name).toEqual('Cat2');
+      expect(state[0].name).toEqual('Dog2');
     });
   })
 
@@ -65,7 +65,7 @@ describe('Reducer tests', () => {
 
       let categoryId = uuid();
       let expenseObj = {
-        expense: 'PCC',
+        expense: 'LAPTOP',
         cost: '200',
         id: uuid(),
         categoryId: categoryId
@@ -78,15 +78,15 @@ describe('Reducer tests', () => {
       state = expenseReducer(state, {
         type: 'EXPENSE_ADD',
         payload: {
-          expense: 'PCC',
+          expense: 'LAPTOP',
           cost: '200',
           id: uuid(),
           categoryId: categoryId
         }
       });
 
-      
-      expect(state[categoryId][0].expense).toEqual('PCC');
+
+      expect(state[categoryId][0].expense).toEqual('LAPTOP');
       expect(state[categoryId][0].cost).toEqual('200');
     });
   });
