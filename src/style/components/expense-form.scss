@@ -1,5 +1,5 @@
 #ExpenseWrapper {
-  margin-top: 1em;
+  margin-top: 3em;
 }
 
 
@@ -9,7 +9,7 @@
 
   &:hover {
     @include box-basic;
-    background: black;
+    background: ivory;
     outline: none;
   }
 }
@@ -22,16 +22,16 @@
 
 
 div#ExpenseDiv {
-  border: 1px solid grey;
-  background: #006700;
+  border: 2px solid black;
+  background: white;
   border-bottom: none;
-  padding: .4em 0 1.5em 1em;
+  padding: .5em 0 1.5em 1em;
   display: flex;
   flex-direction: row;
   align-items: center;
 
   &:first-child {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid black;
   }
 
   &:last-child {
@@ -53,35 +53,34 @@ div#ExpenseDiv {
 #expenseSubmitButton {
   display: block;
   width: 8em;
-  height: 3em;
-  margin-left: 3.9em;
-  color: #169816;
+  height: 2em;
+  margin-left: 4em;
+  color: red;
   background: none;
   outline: none;
-  border: none;
-  font-size: 13px;
+  font-size: 20px;
 
   &:hover {
-    color: rgb(22, 152, 22);
+    color: rgb(66, 244, 197);
   }
 }
 
 
 input.inactive {
-  background: black;
-  color: white;
-  font-size: 11px;
-  border: 1px ivory;
-  padding: 8px;
+  background: white;
+  color: black;
+  font-size: 15px;
+  border: 2px solid black;
+  padding: 6px;
 }
 
 
 a#deleteExpense {
   text-decoration: none;
-  color: #e91c1c;
-  padding: .3em;
+  color: red;
+  padding: .5em;
   margin-right: 2.8em;
-  padding-top: .3em;
+  padding-top: .2.8em;
 }
 
 

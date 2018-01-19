@@ -5,7 +5,7 @@
 
   &:hover {
     @include box-basic;
-    background: black;
+    background: ivory;
     outline: none;
   }
 }
@@ -29,12 +29,12 @@ div#categoryForm {
 
 
 input {
-  border-radius: 3px;
+  border-radius: 5px;
   margin-right: .3em;
-  border:1px solid transparent;
+  border: 3px solid transparent;
   color: black;
-  font-style: bold;
-  font-size: .6em;
+  font-family: impact;
+  font-size: .8em;
 }
 
 
@@ -48,29 +48,34 @@ input[type=number]::-webkit-outer-spin-button {
 #categorySubmitButton {
   display: block;
   margin-left: 1.2em;
-  width: 8em;
-  height: 3em;
+  width: 10em;
+  height: 5em;
   margin-right: 2em;
-  color: rgb(22, 152, 22);
+  color: rgb(66, 130, 240);
   background: none;
   outline: none;
   border: none;
-  font-size: 13px;
+  font-size: 10px;
 
   &:hover{
-    color: rgb(9, 89, 9);
+    color: rgb(66, 134, 244);
   }
 }
 
 
 input.inactive {
-  background: black;
-  color: white;
-  border: 1px ivory;
+  background: ivory;
+  color: black;
+  border: 2px black;
 
   &:focus {
     outline: none;
   }
+}
+
+
+.invisible {
+  display: none;
 }
 
 
@@ -82,9 +87,4 @@ input.inactive {
     display: block;
     visibility: visible;
   }
-}
-
-
-.invisible {
-  display: none;
 }
