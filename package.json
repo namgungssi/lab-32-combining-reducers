@@ -19,15 +19,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pmookerjee/lab-32-combining-reducers.git"
+    "url": "git+https://github.com/namgungssi/lab-32-combining-reducers.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Pmookerjee/lab-32-combining-reducers/issues"
+    "url": "https://github.com/namgungssi/lab-32-combining-reducers/issues"
   },
-  "homepage": "https://github.com/Pmookerjee/lab-32-combining-reducers#readme",
+  "homepage": "https://github.com/namgungssi/lab-32-combining-reducers#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -55,12 +55,12 @@
   },
   "devDependencies": {
     "babel-jest": "^21.2.0",
-    "enzyme": "^3.2.0",
+    "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.0",
     "jest": "^21.2.1",
     "jest-css-modules": "^1.1.0",
     "react-test-renderer": "^16.2.0",
-    "sinon": "^4.1.3"
+    "sinon": "^4.1.6"
   }
 }
