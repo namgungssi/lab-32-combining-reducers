@@ -2,7 +2,7 @@ const emptyState = [];
 
 
 
-export default (state=initialState, action => {
+export default (state=initialState, action) => {
   let {type, payload}=action;
   switch(type){
 
@@ -31,4 +31,4 @@ export default (state=initialState, action => {
       default:
           return state;
   }
-};
+}
