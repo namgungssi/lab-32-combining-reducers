@@ -20,11 +20,7 @@ export default (state=initialState, action) => {
 
       case 'EXPENSE_UPDATE': return state.map(expense => expense.id === payload.id ? payload : expense);
 
-      case 'CATEGORY_DELETE': return state.filter(item => item.dogId !== payload);
-
-
       default:
          return state;
-
    }
  };

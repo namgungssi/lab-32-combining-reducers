@@ -15,20 +15,7 @@ export default (state=initialState, action) => {
     case "CATEGORY_DESTROY":
     return state.filter(item => item.id !== payload);
 
-    case "EXPENSE_ADD":
-    return state.map(item => item.id === payload.dogId ? (item.expenses += payload.amount) && (item.remaining = item.budget - item.expenses) && item : item);
-
-    case "EXPENSE_UPDATE":
-    return state.map(item => item.id === payload.dogId ? (item.expenses += payload.difference) && (item.remaining = item.budget - item.expenses) && item : item);
-
-    case "EXPENSE_DELETE":
-    return state.map(item => item.id === payload.dogId ? (item.expenses = item.expenses - payload.amount) && (item.remaining = item.budget - item.expenses) && item : item);
-
-    case "EXPENSE_UPDATE":
-        let updateExpenseList = categoryExpenses.map(exp => exp.id === id ? payload : exp );
-        return {...state, [categoryId]: updateExpenseList};
-
-      default:
-          return state;
+    default:
+    return state;
   }
 }
