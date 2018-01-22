@@ -20,16 +20,16 @@ class Expense extends React.Component {
 
     return (
       <div id='ExpenseWrapper'>
-      <ExpenseForm handler={this.props.createExpense}
-      categoryId={categoryId}
-      categoryBudget={categoryBudget}
-      submitText={this.state.submitText}/>
-      <ExpenseList
-      categoryId={categoryId}
-      expenses={expenses}
-      handleDelete={this.props.deleteExpense}
-      handleUpdate={this.props.updateExpense}
-      />
+        <ExpenseForm handler={this.props.createExpense}
+          categoryId={categoryId}
+          categoryBudget={categoryBudget}
+          submitText={this.state.submitText}/>
+        <ExpenseList
+          categoryId={categoryId}
+          expenses={expenses}
+          handleDelete={this.props.deleteExpense}
+          handleUpdate={this.props.updateExpense}
+          />
       </div>
     )
   }

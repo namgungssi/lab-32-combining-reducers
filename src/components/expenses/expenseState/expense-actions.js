@@ -16,13 +16,13 @@ export const deleteExpense = (expense) => {
   return {
     type:"EXPENSE_DELETE",
     payload: expense
-  }
-}
+  };
+};
 
 
 export const updateExpense = (expense) => {
   return {
     type:"EXPENSE_UPDATE",
     payload: expense
-  }
-}
+  };
+};

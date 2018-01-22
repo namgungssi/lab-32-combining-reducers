@@ -2,36 +2,24 @@ import {log} from "util";
 
 
 
-const initialState = {};
+const initialState = [];
 
 
 
 export default (state=initialState, action) => {
-  let {type, payload={}} = action;
-  let {id, categoryId} = payload;
-  let categoryExpenses = state[categoryId];
+  let {type, payload=action;
+    switch(type) {
 
-  switch(type) {
+      case 'EXPENSE_ADD': return [...state, payload];
 
-    case "CATEGORY_ADD":
-    return {...state, [payload.id]:[]};
+      case 'EXPENSE_DELETE': return state.filter(item => item.id !== payload.id);
 
-    case "CATEGORY_DESTROY":
-    let {[payload]:x, ...newState} = state;
-    return newState;
+      case 'EXPENSE_UPDATE': return state.map(expense => expense.id === payload.id ? payload : expense);
 
-    case "EXPENSE_ADD":
-    return {...state, [categoryId]: [...categoryExpenses, payload]};
+      case 'CATEGORY_DELETE': return state.filter(item => item.dogId !== payload);
 
-    case "EXPENSE_DELETE":
-    let deleteExpenseList = categoryExpenses.filter(exp => exp.id !== id );
-    return {...state, [categoryId]: deleteExpenseList};
 
-    case "EXPENSE_UPDATE":
-    let updateExpenseList = categoryExpenses.map(exp => exp.id === id ? payload : exp );
-    return {...state, [categoryId]: updateExpenseList};
-
-    default:
-    return state;
+      default:
+      return state;
+    };
   };
-};

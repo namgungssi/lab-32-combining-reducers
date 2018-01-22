@@ -13,7 +13,7 @@ export const createCategory = (category) => {
 };
 
 
-export const updateCategory = (category) => {
+export const updateCategory = category => {
   return {
     type: "CATEGORY_UPDATE",
     payload: category
@@ -21,7 +21,7 @@ export const updateCategory = (category) => {
 }
 
 
-export const deleteCategory = (categoryId) => {
+export const deleteCategory = categoryId => {
   return {
     type: "CATEGORY_DESTROY",
     payload: categoryId
