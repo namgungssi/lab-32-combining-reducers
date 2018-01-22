@@ -24,7 +24,11 @@ export default (state=initialState, action => {
     case "EXPENSE_DELETE":
     return state.map(item => item.id === payload.dogId ? (item.expenses = item.expenses - payload.amount) && (item.remaining = item.budget - item.expenses) && item : item);
 
-    default:
-    return state;
-  };
+    case "EXPENSE_UPDATE":
+        let updateExpenseList = categoryExpenses.map(exp => exp.id === id ? payload : exp );
+        return {...state, [categoryId]: updateExpenseList};
+
+      default:
+          return state;
+  }
 };

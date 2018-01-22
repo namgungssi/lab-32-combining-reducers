@@ -7,7 +7,11 @@ const initialState = [];
 
 
 export default (state=initialState, action) => {
-  let {type, payload=action;
+
+  let {type, payload={}} = action;
+  let {id, categoryId} = payload;
+  let categoryExpenses = state[categoryId];
+
     switch(type) {
 
       case 'EXPENSE_ADD': return [...state, payload];
@@ -20,6 +24,7 @@ export default (state=initialState, action) => {
 
 
       default:
-      return state;
-    };
-  };
+         return state;
+
+   }
+ };
